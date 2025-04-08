@@ -6,5 +6,23 @@
       "email": "akash@gmail.com",
       "password": "Akash@7492"
     }
+  ],
+  "events": [
+    {
+      "id": 1,
+      "title": "Angular Meetup",
+      "description": "A meetup for Angular enthusiasts",
+      "date": "2025-04-10",
+      "location": "Pune",
+      "createdBy": 1
+    },
+    {
+      "id": 2,
+      "title": "React Meetup",
+      "description": "A meetup for React enthusiasts",
+      "date": "2025-04-10",
+      "location": "Mumbai",
+      "createdBy": 1
+    }
   ]
 }

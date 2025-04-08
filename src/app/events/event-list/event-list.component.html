@@ -1,0 +1,15 @@
+<h2>All Events</h2>
+
+<div class="event-grid">
+  <mat-card *ngFor="let event of events">
+    <mat-card-title>{{ event.title }}</mat-card-title>
+    <mat-card-subtitle>{{ event.date | date }}</mat-card-subtitle>
+    <mat-card-content>
+      <p>{{ event.description }}</p>
+      <p><strong>Location:</strong> {{ event.location }}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button [routerLink]="['/events', event.id]">View</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

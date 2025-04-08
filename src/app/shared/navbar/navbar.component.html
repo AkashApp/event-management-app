@@ -1,0 +1,12 @@
+<mat-toolbar color="primary">
+    <span class="logo">🎫 Eventify</span>
+    <span class="spacer"></span>
+    <ng-container *ngIf="isLoggedIn; else guest">
+      <button mat-flat-button class="logout-button" (click)="logout()">Logout</button>
+    </ng-container>
+    <ng-template #guest>
+      <a mat-button routerLink="/login">Login</a>
+      <a mat-button routerLink="/register">Register</a>
+    </ng-template>
+  </mat-toolbar>
+  

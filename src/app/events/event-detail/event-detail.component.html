@@ -1,0 +1,9 @@
+<mat-card *ngIf="event">
+    <mat-card-title>{{ event.title }}</mat-card-title>
+    <mat-card-subtitle>{{ event.date | date }}</mat-card-subtitle>
+    <mat-card-content>
+      <p><strong>Description:</strong> {{ event.description }}</p>
+      <p><strong>Location:</strong> {{ event.location }}</p>
+    </mat-card-content>
+  </mat-card>
+  

@@ -1,0 +1,35 @@
+<div class="home-container">
+  <mat-card class="welcome-card mat-elevation-z4">
+    <div class="header">
+      <h2>Welcome, {{ user?.name }} 👋</h2>
+      <p>Plan & manage your events effortlessly!</p>
+      <button mat-raised-button color="primary" [routerLink]="['/events/new']">
+        + Create New Event
+      </button>
+    </div>
+  </mat-card>
+
+  <h3 class="section-title">Upcoming Events</h3>
+
+  <div *ngIf="upcomingEvents.length; else noEvents" class="event-grid">
+    <mat-card class="event-card mat-elevation-z3" *ngFor="let event of upcomingEvents">
+      <mat-card-header>
+        <mat-icon mat-card-avatar color="accent">event</mat-icon>
+        <mat-card-title>{{ event.title }}</mat-card-title>
+        <mat-card-subtitle>{{ event.date | date:'mediumDate' }}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p>{{ event.description }}</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button color="accent" [routerLink]="['/events', event.id]">View</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+
+  <ng-template #noEvents>
+    <mat-card class="no-event-card mat-elevation-z2">
+      <p>No upcoming events found. Create one now!</p>
+    </mat-card>
+  </ng-template>
+</div>
